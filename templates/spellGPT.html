@@ -68,8 +68,36 @@
 <div class="heading">
     <h1 style="font-size: 80px;">SpellGPT</h1>
     <div class="subtitle">
-        <p style="font-size: 40px;">Correct your spelling and grammar using the GPT 3.5 language model!</p>
-        <br /><br />
+        <p style="font-size: 40px;">Correct your spelling and grammar using the GPT 3.5 language model! Source code for this project can be found <a href="https://github.com/SlimeyDev/SpellGPT">here</a>.</p>
+        <form action="{{ url_for('process') }}" method="POST">
+            <textarea name="text" rows="4" cols="50">Paste your text here!</textarea>
+            <br/>
+            <label for="mode">Choose the mode:</label>
+            <select name="modes" id="modes">
+              <option value="SnG">Spelling and grammar</option>
+              <option value="formal">Tone: formal</option>
+              <option value="informal">Tone: Informal</option>
+              <option value="casual">Tone: Casual</option>
+            </select>
+            <br/>
+            <input type="submit" class="btn">
+        </form>
+    </div>
+</div>
+<div class="heading" id="corrected">
+    <h1 style="font-size: 80px;">Corrected spelling and grammar using the GPT 3.5:</h1>
+    <div class="subtitle">
+        {% if text %}
+        <p>{{ text }}</p>
+        {% else %}
+        <p>No text given.</p>
+        {% endif %}
+
+        {% if mode %}
+        <p>You selected: {{ mode }} mode</p>
+        {% else %}
+        <p>No mode selected.</p>
+        {% endif %}
     </div>
 </div>
     <div class="footer">
