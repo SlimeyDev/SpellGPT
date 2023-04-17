@@ -66,9 +66,9 @@
         </ul>
 </nav>
 <div class="heading">
-    <h1 style="font-size: 80px;">SpellGPT</h1>
+    <h1 style="font-size: 80px;">SpellGPT V1.0</h1>
     <div class="subtitle">
-        <p style="font-size: 40px;">Correct your spelling and grammar using the GPT 3.5 language model! Source code for this project can be found <a href="https://github.com/SlimeyDev/SpellGPT">here</a>.</p>
+        <p style="font-size: 40px;">Correct your spelling and grammar using the GPT 3.5 language model! Source code for this project can be found <a href="https://github.com/SlimeyDev/SpellGPT">here</a>.<br/>Alert: The processing of text will increase by the amount of text provided!</A></p>
         <form action="{{ url_for('process') }}" method="POST">
             <textarea name="text" rows="4" cols="50">Paste your text here!</textarea>
             <br/>
@@ -78,6 +78,13 @@
               <option value="formal">Tone: formal</option>
               <option value="informal">Tone: Informal</option>
               <option value="casual">Tone: Casual</option>
+              <option value="Optimistic">Tone: Optimistic</option>
+              <option value="Worried">Tone: Worried</option>
+              <option value="Friendly">Tone: Friendly</option>
+              <option value="Friendly">Tone: Surprised</option>
+              <option value="Cooperative">Tone: Cooperative</option>
+              <option value="shakespeare">shakespeare style</option>
+              <option value="GenZ">GenZ</option>
             </select>
             <br/>
             <input type="submit" class="btn">
@@ -85,7 +92,7 @@
     </div>
 </div>
 <div class="heading" id="corrected">
-    <h1 style="font-size: 80px;">Corrected spelling and grammar using the GPT 3.5:</h1>
+    <h1 style="font-size: 80px;">Output after GPT 3.5 processing:</h1>
     <div class="subtitle">
         {% if text %}
         <p>{{ text }}</p>
