@@ -20,6 +20,7 @@ def process():
     else:
         #outputting the processed text
         key = os.getenv("OPEN_AI")
+        #Spelling and grammar mode
         if mode == "SnG":
             openai.api_key = key
             messages = []
@@ -33,6 +34,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #formal tone mode
         elif mode == "formal":
             openai.api_key = key
             messages = []
@@ -46,6 +48,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #informal tone mode
         elif mode == "informal":
             openai.api_key = key
             messages = []
@@ -59,6 +62,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #casual tone mode
         elif mode == "casual":
             openai.api_key = key
             messages = []
@@ -72,6 +76,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #shakespeare mode
         elif mode == "shakespeare":
             openai.api_key = key
             messages = []
@@ -85,6 +90,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #genz mode
         elif mode == "GenZ":
             openai.api_key = key
             messages = []
@@ -98,6 +104,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #optimistic tone mode
         elif mode == "Optimistic":
             openai.api_key = key
             messages = []
@@ -111,6 +118,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #worried tone mode
         elif mode == "Worried":
             openai.api_key = key
             messages = []
@@ -124,6 +132,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #friendly tone mode
         elif mode == "Friendly":
             openai.api_key = key
             messages = []
@@ -137,6 +146,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #cooperative tone mode
         elif mode == "Cooperative":
             openai.api_key = key
             messages = []
@@ -150,6 +160,7 @@ def process():
             print(reply)
             processed_text = reply
             return render_template("spellGPT.html", text=processed_text, mode=mode)
+        #surprised tone mode
         elif mode == "Surprised":
             openai.api_key = key
             messages = []
