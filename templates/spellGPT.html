@@ -55,6 +55,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="https://slimeydev.github.io/apps/sysinfo.html">sysinfo</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="apps/password_generator.html">password generator</a>
+                </li>
                 </div>
             </div>
             <li class="nav-item">
@@ -64,14 +67,14 @@
                 <a class="nav-link" href="https://slimeydev.github.io/SlimeyBOT.html">discord bot</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://spellgpt.slimeydev.repl.co/">SpellGPT</a>
+                <a class="nav-link" href="https://spellgpt.onrender.com/">SpellGPT</a>
             </li>
         </ul>
 </nav>
 <div class="heading">
-    <h1 style="font-size: 80px;">SpellGPT V1.0</h1>
+    <h1 class="display-1">SpellGPT V1.0</h1>
     <div class="subtitle">
-        <p style="font-size: 40px;">Correct your spelling and grammar using the GPT 3.5 language model! Source code for this project can be found <a href="https://github.com/SlimeyDev/SpellGPT">here</a>.<br/>Alert: The time taken for the processing of text will increase by the amount of text provided!</A></p>
+        <p class="display-4">Correct your spelling and grammar using the GPT 3.5 language model! Source code for this project can be found <a href="https://github.com/SlimeyDev/SpellGPT">here</a>.<br/>Alert: The time taken for the processing of text will increase by the amount of text provided!</A></p>
         <form action="{{ url_for('process') }}" method="POST">
             <textarea name="text" rows="4" cols="50">Paste your text here!</textarea>
             <br/>
@@ -95,7 +98,7 @@
     </div>
 </div>
 <div class="heading" id="corrected">
-    <h1 style="font-size: 80px;">Output after GPT 3.5 processing:</h1>
+    <h1 class="display-2">Output after GPT 3.5 processing:</h1>
     <div class="subtitle">
         {% if text %}
         <p>{{ text }}</p>
@@ -110,11 +113,10 @@
         {% endif %}
     </div>
 </div>
-    <div class="footer">
-        <div class="bot-footer">
-            Copyright © SlimeyDev - 2021 - 2023
-        </div>
-    </div>
+<div class="footer">
+    <img src="https://i.ibb.co/gmJRsVZ/slimeydev.jpg" width="50px" height="50px">
+    Copyright © SlimeyDev - 2021 - 2023
+</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
