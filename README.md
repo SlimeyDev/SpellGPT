@@ -4,5 +4,5 @@ Welcome to my open-source GitHub repository for a web application that utilizes 
 
 # Note:
 
-This project has been taken down due to not being able to access the openai API as I have run out of the free credits for the API.
+This project has been discontinued due to not being able to access the openai API as I have run out of the free credits for the API.
 Feel free to reuse this code.
